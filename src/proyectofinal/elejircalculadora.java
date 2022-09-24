@@ -44,8 +44,9 @@ public class elejircalculadora extends javax.swing.JFrame {
         jLabel1.setText("Elije la calculadora");
 
         basica.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        basica.setText("Bàsica");
+        basica.setText("Básica");
         basica.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 153, 153)));
+        basica.setFocusPainted(false);
         basica.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 basicaActionPerformed(evt);
@@ -55,6 +56,7 @@ public class elejircalculadora extends javax.swing.JFrame {
         cientifica.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         cientifica.setText("Cientifica");
         cientifica.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 153, 153)));
+        cientifica.setFocusPainted(false);
         cientifica.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cientificaActionPerformed(evt);
@@ -94,10 +96,10 @@ public class elejircalculadora extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(26, 26, 26)
                 .addComponent(jLabel1)
-                .addGap(29, 29, 29)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jLabel2)
-                    .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(38, 38, 38)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
                 .addGap(29, 29, 29)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(cientifica)
