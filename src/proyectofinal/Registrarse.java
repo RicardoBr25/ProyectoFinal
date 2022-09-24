@@ -22,7 +22,7 @@ public class Registrarse extends javax.swing.JFrame {
     public Registrarse() {
         initComponents();
         setLocationRelativeTo(null);
-        setSize(400,300);
+        
         num(contraseña);
         letra(Nombre);
         letra(apellido);
@@ -76,6 +76,7 @@ public class Registrarse extends javax.swing.JFrame {
         jLabel5 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Ingresar datos");
         setResizable(false);
 
         jPanel1.setLayout(null);
@@ -88,17 +89,17 @@ public class Registrarse extends javax.swing.JFrame {
         nombre.setText("Nombre:");
         nombre.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jPanel1.add(nombre);
-        nombre.setBounds(10, 50, 80, 18);
+        nombre.setBounds(10, 50, 80, 20);
 
         apellidos.setText("Apellido:");
         apellidos.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jPanel1.add(apellidos);
-        apellidos.setBounds(10, 90, 80, 18);
+        apellidos.setBounds(10, 90, 80, 20);
 
         crearcontraseña.setText("Crea una contraseña:");
         crearcontraseña.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jPanel1.add(crearcontraseña);
-        crearcontraseña.setBounds(12, 129, 150, 18);
+        crearcontraseña.setBounds(12, 129, 150, 20);
 
         regresar.setText("Regresar");
         regresar.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 153, 153)));
@@ -108,7 +109,7 @@ public class Registrarse extends javax.swing.JFrame {
             }
         });
         jPanel1.add(regresar);
-        regresar.setBounds(10, 179, 90, 17);
+        regresar.setBounds(10, 179, 90, 30);
 
         ingresar.setText("Ingresar");
         ingresar.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 153, 153)));
@@ -118,7 +119,7 @@ public class Registrarse extends javax.swing.JFrame {
             }
         });
         jPanel1.add(ingresar);
-        ingresar.setBounds(250, 180, 110, 17);
+        ingresar.setBounds(250, 180, 110, 30);
 
         Nombre.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -140,7 +141,7 @@ public class Registrarse extends javax.swing.JFrame {
 
         jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/fondocalculadora.png"))); // NOI18N
         jPanel1.add(jLabel5);
-        jLabel5.setBounds(0, 0, 410, 260);
+        jLabel5.setBounds(-90, -70, 470, 360);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -150,7 +151,7 @@ public class Registrarse extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 260, Short.MAX_VALUE)
         );
 
         pack();

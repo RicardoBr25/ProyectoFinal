@@ -22,7 +22,7 @@ public class Iniciarsesion extends javax.swing.JFrame {
     public Iniciarsesion() {
         initComponents();
         setLocationRelativeTo(null);
-        setSize(390,295);
+        
         num(contraseña1);
         letra(usuario);
     }
@@ -77,6 +77,7 @@ public class Iniciarsesion extends javax.swing.JFrame {
         jCheckBox1.setText("jCheckBox1");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Iniciar sesioin");
         setResizable(false);
 
         jPanel1.setLayout(null);
@@ -90,7 +91,7 @@ public class Iniciarsesion extends javax.swing.JFrame {
             }
         });
         jPanel1.add(regresar);
-        regresar.setBounds(210, 240, 57, 19);
+        regresar.setBounds(210, 240, 70, 30);
 
         jLabel1.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
         jLabel1.setText("Usuario:");
@@ -107,7 +108,7 @@ public class Iniciarsesion extends javax.swing.JFrame {
             }
         });
         jPanel1.add(Ingresar);
-        Ingresar.setBounds(310, 240, 53, 19);
+        Ingresar.setBounds(310, 240, 60, 30);
 
         jLabel2.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
         jLabel2.setText("Contraseña:");
@@ -136,7 +137,7 @@ public class Iniciarsesion extends javax.swing.JFrame {
             }
         });
         jPanel1.add(chkMostrarContraseña);
-        chkMostrarContraseña.setBounds(250, 190, 130, 23);
+        chkMostrarContraseña.setBounds(220, 200, 160, 25);
 
         contraseña1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -148,17 +149,17 @@ public class Iniciarsesion extends javax.swing.JFrame {
 
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/fondocalculadora.png"))); // NOI18N
         jPanel1.add(jLabel3);
-        jLabel3.setBounds(0, 0, 430, 290);
+        jLabel3.setBounds(-100, -50, 510, 360);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 390, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 403, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 295, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 310, Short.MAX_VALUE)
         );
 
         pack();

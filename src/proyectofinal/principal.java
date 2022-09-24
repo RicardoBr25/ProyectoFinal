@@ -36,6 +36,7 @@ public class principal extends javax.swing.JFrame {
         salir = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Principal");
         getContentPane().setLayout(null);
 
         jButton5.setBackground(new java.awt.Color(204, 204, 255));
@@ -49,7 +50,7 @@ public class principal extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton5);
-        jButton5.setBounds(330, 230, 30, 19);
+        jButton5.setBounds(330, 230, 50, 30);
 
         jButton3.setBackground(new java.awt.Color(204, 204, 255));
         jButton3.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
@@ -79,14 +80,14 @@ public class principal extends javax.swing.JFrame {
 
         salir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/fondocalculadora.png"))); // NOI18N
         getContentPane().add(salir);
-        salir.setBounds(0, 0, 380, 260);
+        salir.setBounds(-80, -50, 480, 340);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
         Registrarse a =new Registrarse();
-        a.setLocationRelativeTo(null);
+        
         a.setVisible(true);
         this.setVisible(false);
        
