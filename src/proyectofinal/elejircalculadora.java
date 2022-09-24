@@ -16,6 +16,8 @@ public class elejircalculadora extends javax.swing.JFrame {
      */
     public elejircalculadora() {
         initComponents();
+        setLocationRelativeTo(null);
+        setSize(300,300);
     }
 
     /**
@@ -31,14 +33,37 @@ public class elejircalculadora extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         basica = new javax.swing.JButton();
         cientifica = new javax.swing.JButton();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jLabel1.setText("elije la calculadora");
+        jPanel1.setBackground(new java.awt.Color(204, 204, 255));
 
-        basica.setText("Basica");
+        jLabel1.setFont(new java.awt.Font("Arial", 1, 17)); // NOI18N
+        jLabel1.setText("Elije la calculadora");
 
+        basica.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        basica.setText("Bàsica");
+        basica.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 153, 153)));
+        basica.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                basicaActionPerformed(evt);
+            }
+        });
+
+        cientifica.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         cientifica.setText("Cientifica");
+        cientifica.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 153, 153)));
+        cientifica.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cientificaActionPerformed(evt);
+            }
+        });
+
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/calculadorabasica.png"))); // NOI18N
+
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/calculadoracientifica.png"))); // NOI18N
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -48,31 +73,43 @@ public class elejircalculadora extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(28, 28, 28)
-                        .addComponent(basica)
-                        .addGap(102, 102, 102)
-                        .addComponent(cientifica))
+                        .addComponent(jLabel2)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 78, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(1, 1, 1))
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(111, 111, 111)
-                        .addComponent(jLabel1)))
-                .addContainerGap(49, Short.MAX_VALUE))
+                        .addGap(69, 69, 69)
+                        .addComponent(jLabel1)
+                        .addGap(0, 26, Short.MAX_VALUE))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(41, 41, 41)
+                        .addComponent(basica, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(cientifica)
+                        .addGap(13, 13, 13)))
+                .addGap(50, 50, 50))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(30, 30, 30)
+                .addGap(26, 26, 26)
                 .addComponent(jLabel1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 145, Short.MAX_VALUE)
+                .addGap(29, 29, 29)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jLabel2)
+                    .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(29, 29, 29)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(basica)
-                    .addComponent(cientifica))
-                .addGap(58, 58, 58))
+                    .addComponent(cientifica)
+                    .addComponent(basica))
+                .addContainerGap(47, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -81,6 +118,22 @@ public class elejircalculadora extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void basicaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_basicaActionPerformed
+        calcubasica abrir =new calcubasica();
+        abrir.setLocationRelativeTo(null);
+        abrir.setVisible(true);
+        this.setVisible(false);
+             
+    }//GEN-LAST:event_basicaActionPerformed
+
+    private void cientificaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cientificaActionPerformed
+        calcucientifica abrir =new calcucientifica();
+        abrir.setLocationRelativeTo(null);
+        abrir.setVisible(true);
+        this.setVisible(false);
+        
+    }//GEN-LAST:event_cientificaActionPerformed
 
     /**
      * @param args the command line arguments
@@ -121,6 +174,8 @@ public class elejircalculadora extends javax.swing.JFrame {
     private javax.swing.JButton basica;
     private javax.swing.JButton cientifica;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
 }

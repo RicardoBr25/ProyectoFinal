@@ -128,6 +128,7 @@ public class Registrarse extends javax.swing.JFrame {
        abrir.setLocationRelativeTo(null);
        abrir.setVisible(true);
        this.setVisible(false);
+       
     }//GEN-LAST:event_ingresarActionPerformed
 
     private void NombreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NombreActionPerformed
