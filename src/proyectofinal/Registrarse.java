@@ -53,17 +53,17 @@ public class Registrarse extends javax.swing.JFrame {
         nombre.setText("Nombre:");
         nombre.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jPanel1.add(nombre);
-        nombre.setBounds(10, 50, 80, 18);
+        nombre.setBounds(10, 50, 80, 20);
 
         apellidos.setText("Apellido:");
         apellidos.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jPanel1.add(apellidos);
-        apellidos.setBounds(10, 90, 80, 18);
+        apellidos.setBounds(10, 90, 80, 20);
 
         crearcontraseña.setText("Crea una contraseña:");
         crearcontraseña.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jPanel1.add(crearcontraseña);
-        crearcontraseña.setBounds(12, 129, 120, 18);
+        crearcontraseña.setBounds(12, 129, 150, 20);
 
         regresar.setText("Regresar");
         regresar.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 153, 153)));
@@ -73,7 +73,7 @@ public class Registrarse extends javax.swing.JFrame {
             }
         });
         jPanel1.add(regresar);
-        regresar.setBounds(10, 179, 90, 17);
+        regresar.setBounds(10, 179, 90, 19);
 
         ingresar.setText("Ingresar");
         ingresar.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 153, 153)));
@@ -83,7 +83,7 @@ public class Registrarse extends javax.swing.JFrame {
             }
         });
         jPanel1.add(ingresar);
-        ingresar.setBounds(250, 180, 110, 17);
+        ingresar.setBounds(250, 180, 110, 19);
 
         Nombre.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -91,11 +91,11 @@ public class Registrarse extends javax.swing.JFrame {
             }
         });
         jPanel1.add(Nombre);
-        Nombre.setBounds(100, 50, 150, 20);
+        Nombre.setBounds(180, 50, 150, 22);
         jPanel1.add(apellido);
-        apellido.setBounds(100, 90, 150, 20);
+        apellido.setBounds(180, 90, 150, 22);
         jPanel1.add(contraseña);
-        contraseña.setBounds(140, 130, 170, 20);
+        contraseña.setBounds(180, 130, 170, 22);
 
         jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/fondocalculadora.png"))); // NOI18N
         jPanel1.add(jLabel5);

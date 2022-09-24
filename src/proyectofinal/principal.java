@@ -44,7 +44,7 @@ public class principal extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton5);
-        jButton5.setBounds(340, 220, 53, 23);
+        jButton5.setBounds(340, 220, 59, 25);
 
         jButton3.setText("Iniciar Sesìon");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
@@ -53,7 +53,7 @@ public class principal extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton3);
-        jButton3.setBounds(130, 40, 170, 23);
+        jButton3.setBounds(110, 50, 170, 25);
 
         jButton4.setText("Registrarse");
         jButton4.addActionListener(new java.awt.event.ActionListener() {
@@ -62,11 +62,11 @@ public class principal extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton4);
-        jButton4.setBounds(120, 90, 200, 23);
+        jButton4.setBounds(90, 110, 200, 25);
 
         salir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/fondocalculadora.png"))); // NOI18N
         getContentPane().add(salir);
-        salir.setBounds(0, 0, 440, 280);
+        salir.setBounds(-40, -10, 450, 320);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents

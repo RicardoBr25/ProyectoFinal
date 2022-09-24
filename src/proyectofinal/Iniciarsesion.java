@@ -76,13 +76,13 @@ public class Iniciarsesion extends javax.swing.JFrame {
         jPanel1.add(jLabel2);
         jLabel2.setBounds(20, 90, 80, 19);
         jPanel1.add(contraseña);
-        contraseña.setBounds(110, 90, 171, 20);
+        contraseña.setBounds(110, 90, 171, 22);
         jPanel1.add(usuario);
-        usuario.setBounds(110, 40, 171, 20);
+        usuario.setBounds(110, 40, 171, 22);
 
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/fondocalculadora.png"))); // NOI18N
         jPanel1.add(jLabel3);
-        jLabel3.setBounds(0, 0, 390, 250);
+        jLabel3.setBounds(-120, -60, 510, 320);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
