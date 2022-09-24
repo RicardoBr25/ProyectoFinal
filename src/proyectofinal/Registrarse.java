@@ -5,6 +5,11 @@
  */
 package proyectofinal;
 
+import java.awt.event.KeyAdapter;
+import java.awt.event.KeyEvent;
+import javax.swing.JOptionPane;
+import javax.swing.JTextField;
+
 /**
  *
  * @author Monserrat
@@ -18,6 +23,35 @@ public class Registrarse extends javax.swing.JFrame {
         initComponents();
         setLocationRelativeTo(null);
         setSize(400,300);
+        num(contraseña);
+        letra(Nombre);
+        letra(apellido);
+    }
+    private  void num(JTextField a){
+    a.addKeyListener(new KeyAdapter() {
+    public void keyTyped(KeyEvent e){
+        char c = e.getKeyChar();
+        if(!Character.isDigit(c) && c !='!'){
+          e.consume();
+        }
+        if(c=='!'&&contraseña.getText().contains("!")){
+        e.consume();
+        }
+    }
+    });
+    }
+     private  void letra(JTextField a){
+    a.addKeyListener(new KeyAdapter() {
+    public void keyTyped(KeyEvent e){
+        char c = e.getKeyChar();
+        if(Character.isDigit(c) && c !='!'){
+          e.consume();
+        }
+        if(c=='!'&&Nombre.getText().contains("!")){
+        e.consume();
+        }
+    }
+    });
     }
 
     /**
@@ -42,6 +76,7 @@ public class Registrarse extends javax.swing.JFrame {
         jLabel5 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setResizable(false);
 
         jPanel1.setLayout(null);
 
@@ -53,17 +88,17 @@ public class Registrarse extends javax.swing.JFrame {
         nombre.setText("Nombre:");
         nombre.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jPanel1.add(nombre);
-        nombre.setBounds(10, 50, 80, 20);
+        nombre.setBounds(10, 50, 80, 18);
 
         apellidos.setText("Apellido:");
         apellidos.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jPanel1.add(apellidos);
-        apellidos.setBounds(10, 90, 80, 20);
+        apellidos.setBounds(10, 90, 80, 18);
 
         crearcontraseña.setText("Crea una contraseña:");
         crearcontraseña.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jPanel1.add(crearcontraseña);
-        crearcontraseña.setBounds(12, 129, 150, 20);
+        crearcontraseña.setBounds(12, 129, 150, 18);
 
         regresar.setText("Regresar");
         regresar.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 153, 153)));
@@ -73,7 +108,7 @@ public class Registrarse extends javax.swing.JFrame {
             }
         });
         jPanel1.add(regresar);
-        regresar.setBounds(10, 179, 90, 19);
+        regresar.setBounds(10, 179, 90, 17);
 
         ingresar.setText("Ingresar");
         ingresar.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 153, 153)));
@@ -83,7 +118,7 @@ public class Registrarse extends javax.swing.JFrame {
             }
         });
         jPanel1.add(ingresar);
-        ingresar.setBounds(250, 180, 110, 19);
+        ingresar.setBounds(250, 180, 110, 17);
 
         Nombre.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -91,11 +126,17 @@ public class Registrarse extends javax.swing.JFrame {
             }
         });
         jPanel1.add(Nombre);
-        Nombre.setBounds(180, 50, 150, 22);
+        Nombre.setBounds(180, 40, 170, 30);
         jPanel1.add(apellido);
-        apellido.setBounds(180, 90, 150, 22);
+        apellido.setBounds(180, 80, 170, 30);
+
+        contraseña.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                contraseñaActionPerformed(evt);
+            }
+        });
         jPanel1.add(contraseña);
-        contraseña.setBounds(180, 130, 170, 22);
+        contraseña.setBounds(180, 120, 170, 30);
 
         jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/fondocalculadora.png"))); // NOI18N
         jPanel1.add(jLabel5);
@@ -105,11 +146,11 @@ public class Registrarse extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 411, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 378, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 264, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
@@ -124,16 +165,25 @@ public class Registrarse extends javax.swing.JFrame {
     }//GEN-LAST:event_regresarActionPerformed
 
     private void ingresarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ingresarActionPerformed
-       elejircalculadora abrir =new elejircalculadora();
-       abrir.setLocationRelativeTo(null);
-       abrir.setVisible(true);
-       this.setVisible(false);
+       if(!Nombre.getText().isEmpty()&&!apellido.getText().isEmpty()&& !contraseña.getText().isEmpty()){
+            JOptionPane.showMessageDialog(this,"Bienvenido disfrute su programa","Bienvenido",JOptionPane.INFORMATION_MESSAGE);
+            this.dispose();
+            elejircalculadora Elejircalculadora = new elejircalculadora();
+            Elejircalculadora.setVisible(true);
+        }
+        else{
+        JOptionPane.showMessageDialog(this,"Falta ingresar usuario o contraseña","Ingresa usuario o contraseña",JOptionPane.ERROR_MESSAGE);
+        }
        
     }//GEN-LAST:event_ingresarActionPerformed
 
     private void NombreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NombreActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_NombreActionPerformed
+
+    private void contraseñaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_contraseñaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_contraseñaActionPerformed
 
     /**
      * @param args the command line arguments
