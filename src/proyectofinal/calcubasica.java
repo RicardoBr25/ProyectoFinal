@@ -16,6 +16,8 @@ public class calcubasica extends javax.swing.JFrame {
      */
     public calcubasica() {
         initComponents();
+        setLocationRelativeTo(null);
+        setSize(350,450);
     }
 
     /**
@@ -54,51 +56,103 @@ public class calcubasica extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        jPanel1.setBackground(new java.awt.Color(0, 0, 0));
+
         respuesta.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
         respuesta2.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
+        jButton1.setFont(new java.awt.Font("Yu Gothic", 1, 16)); // NOI18N
         jButton1.setText("7");
+        jButton1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 255, 204)));
 
+        jButton2.setFont(new java.awt.Font("Yu Gothic", 1, 16)); // NOI18N
         jButton2.setText("8");
+        jButton2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 255, 204)));
 
+        jButton3.setFont(new java.awt.Font("Yu Gothic", 1, 16)); // NOI18N
         jButton3.setText("9");
+        jButton3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 255, 204)));
 
+        jButton4.setFont(new java.awt.Font("Yu Gothic", 1, 16)); // NOI18N
         jButton4.setText("÷");
+        jButton4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 255, 204)));
 
+        jButton5.setFont(new java.awt.Font("Yu Gothic", 1, 16)); // NOI18N
         jButton5.setText("4");
+        jButton5.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 255, 204)));
 
+        jButton6.setFont(new java.awt.Font("Yu Gothic", 1, 16)); // NOI18N
         jButton6.setText("5");
+        jButton6.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 255, 204)));
 
+        jButton7.setFont(new java.awt.Font("Yu Gothic", 1, 16)); // NOI18N
         jButton7.setText("6");
+        jButton7.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 255, 204)));
 
+        jButton8.setFont(new java.awt.Font("Yu Gothic", 1, 16)); // NOI18N
         jButton8.setText("x");
+        jButton8.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 255, 204)));
 
+        jButton9.setFont(new java.awt.Font("Yu Gothic", 1, 16)); // NOI18N
         jButton9.setText("1");
+        jButton9.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 255, 204)));
 
+        jButton10.setFont(new java.awt.Font("Yu Gothic", 1, 16)); // NOI18N
         jButton10.setText("2");
+        jButton10.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 255, 204)));
 
+        jButton11.setFont(new java.awt.Font("Yu Gothic", 1, 16)); // NOI18N
         jButton11.setText("3");
+        jButton11.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 255, 204)));
 
+        jButton12.setFont(new java.awt.Font("Yu Gothic", 1, 16)); // NOI18N
         jButton12.setText("-");
+        jButton12.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 255, 204)));
 
+        jButton13.setFont(new java.awt.Font("Yu Gothic", 1, 16)); // NOI18N
         jButton13.setText("0");
+        jButton13.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 255, 204)));
 
+        jButton14.setFont(new java.awt.Font("Yu Gothic", 1, 16)); // NOI18N
         jButton14.setText(".");
+        jButton14.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 255, 204)));
 
+        jButton15.setFont(new java.awt.Font("Yu Gothic", 1, 16)); // NOI18N
         jButton15.setText("%");
+        jButton15.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 255, 204)));
 
+        jButton16.setFont(new java.awt.Font("Yu Gothic", 1, 16)); // NOI18N
         jButton16.setText("+");
+        jButton16.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 255, 204)));
 
+        jButton17.setFont(new java.awt.Font("Yu Gothic", 1, 16)); // NOI18N
         jButton17.setText("=");
+        jButton17.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 255, 204)));
 
+        jButton18.setFont(new java.awt.Font("Yu Gothic", 1, 16)); // NOI18N
         jButton18.setText("<--");
+        jButton18.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 255, 204)));
 
+        jButton19.setFont(new java.awt.Font("Yu Gothic", 1, 16)); // NOI18N
         jButton19.setText("C");
+        jButton19.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 255, 204)));
 
         jButton20.setText("Calculadora Cientifica");
+        jButton20.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 255, 204)));
+        jButton20.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton20ActionPerformed(evt);
+            }
+        });
 
         jButton21.setText("Salir");
+        jButton21.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 255, 204)));
+        jButton21.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton21ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -143,18 +197,20 @@ public class calcubasica extends javax.swing.JFrame {
                                 .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                 .addComponent(respuesta2, javax.swing.GroupLayout.PREFERRED_SIZE, 256, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(respuesta, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 256, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(jButton20)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jButton21, javax.swing.GroupLayout.PREFERRED_SIZE, 78, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                .addComponent(respuesta, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 256, javax.swing.GroupLayout.PREFERRED_SIZE))))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(66, 66, 66)
                         .addComponent(jButton17, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jButton18, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jButton19, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(jButton19, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jButton20)
+                        .addGap(27, 27, 27)
+                        .addComponent(jButton21, javax.swing.GroupLayout.PREFERRED_SIZE, 78, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)))
                 .addContainerGap(33, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
@@ -213,6 +269,18 @@ public class calcubasica extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jButton20ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton20ActionPerformed
+        calcucientifica a =new calcucientifica();
+        a.setLocationRelativeTo(null);
+        a.setVisible(true);
+        this.setVisible(false);
+        this.dispose();
+    }//GEN-LAST:event_jButton20ActionPerformed
+
+    private void jButton21ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton21ActionPerformed
+         System.exit(0);
+    }//GEN-LAST:event_jButton21ActionPerformed
 
     /**
      * @param args the command line arguments
