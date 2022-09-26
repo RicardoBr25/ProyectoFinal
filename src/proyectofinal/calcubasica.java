@@ -64,8 +64,10 @@ public class calcubasica extends javax.swing.JFrame {
 
         jPanel1.setBackground(new java.awt.Color(0, 0, 0));
 
+        txt_operacion.setForeground(new java.awt.Color(255, 255, 255));
         txt_operacion.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
+        txt_resultado.setForeground(new java.awt.Color(255, 255, 255));
         txt_resultado.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
         siete.setFont(new java.awt.Font("Yu Gothic", 1, 16)); // NOI18N

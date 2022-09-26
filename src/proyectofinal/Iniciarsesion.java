@@ -72,6 +72,7 @@ public class Iniciarsesion extends javax.swing.JFrame {
         usuario = new javax.swing.JTextField();
         chkMostrarContraseña = new javax.swing.JCheckBox();
         contraseña1 = new javax.swing.JPasswordField();
+        jLabel4 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
 
         jCheckBox1.setText("jCheckBox1");
@@ -91,13 +92,13 @@ public class Iniciarsesion extends javax.swing.JFrame {
             }
         });
         jPanel1.add(regresar);
-        regresar.setBounds(210, 240, 70, 30);
+        regresar.setBounds(290, 310, 70, 30);
 
         jLabel1.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
         jLabel1.setText("Usuario:");
         jLabel1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jPanel1.add(jLabel1);
-        jLabel1.setBounds(60, 80, 61, 20);
+        jLabel1.setBounds(50, 80, 100, 40);
 
         Ingresar.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
         Ingresar.setText("Ingresar");
@@ -108,13 +109,13 @@ public class Iniciarsesion extends javax.swing.JFrame {
             }
         });
         jPanel1.add(Ingresar);
-        Ingresar.setBounds(310, 240, 60, 30);
+        Ingresar.setBounds(390, 310, 60, 30);
 
         jLabel2.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
         jLabel2.setText("Contraseña:");
         jLabel2.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jPanel1.add(jLabel2);
-        jLabel2.setBounds(40, 140, 80, 19);
+        jLabel2.setBounds(50, 160, 110, 40);
 
         usuario.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -127,7 +128,7 @@ public class Iniciarsesion extends javax.swing.JFrame {
             }
         });
         jPanel1.add(usuario);
-        usuario.setBounds(150, 70, 171, 30);
+        usuario.setBounds(210, 80, 170, 40);
 
         chkMostrarContraseña.setText("Mostrar contraseña");
         chkMostrarContraseña.setContentAreaFilled(false);
@@ -137,7 +138,7 @@ public class Iniciarsesion extends javax.swing.JFrame {
             }
         });
         jPanel1.add(chkMostrarContraseña);
-        chkMostrarContraseña.setBounds(220, 200, 160, 25);
+        chkMostrarContraseña.setBounds(290, 230, 160, 25);
 
         contraseña1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -145,21 +146,30 @@ public class Iniciarsesion extends javax.swing.JFrame {
             }
         });
         jPanel1.add(contraseña1);
-        contraseña1.setBounds(150, 140, 170, 30);
+        contraseña1.setBounds(220, 160, 170, 40);
+
+        jLabel4.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jLabel4.setText("Ingresa tus datos");
+        jPanel1.add(jLabel4);
+        jLabel4.setBounds(160, 20, 190, 30);
 
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/fondocalculadora.png"))); // NOI18N
         jPanel1.add(jLabel3);
-        jLabel3.setBounds(-100, -50, 510, 360);
+        jLabel3.setBounds(-110, 0, 620, 430);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 403, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 474, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 310, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 367, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
 
         pack();
@@ -251,6 +261,7 @@ public class Iniciarsesion extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JButton regresar;
     private javax.swing.JTextField usuario;

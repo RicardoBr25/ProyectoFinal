@@ -81,25 +81,25 @@ public class Registrarse extends javax.swing.JFrame {
 
         jPanel1.setLayout(null);
 
-        jLabel1.setFont(new java.awt.Font("Arial", 1, 16)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
         jLabel1.setText("Ingresa tus datos");
         jPanel1.add(jLabel1);
-        jLabel1.setBounds(131, 11, 160, 19);
+        jLabel1.setBounds(160, 20, 160, 22);
 
         nombre.setText("Nombre:");
         nombre.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jPanel1.add(nombre);
-        nombre.setBounds(10, 50, 80, 20);
+        nombre.setBounds(40, 110, 100, 30);
 
         apellidos.setText("Apellido:");
         apellidos.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jPanel1.add(apellidos);
-        apellidos.setBounds(10, 90, 80, 20);
+        apellidos.setBounds(40, 160, 110, 30);
 
         crearcontraseña.setText("Crea una contraseña:");
         crearcontraseña.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jPanel1.add(crearcontraseña);
-        crearcontraseña.setBounds(12, 129, 150, 20);
+        crearcontraseña.setBounds(40, 210, 160, 30);
 
         regresar.setText("Regresar");
         regresar.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 153, 153)));
@@ -109,7 +109,7 @@ public class Registrarse extends javax.swing.JFrame {
             }
         });
         jPanel1.add(regresar);
-        regresar.setBounds(10, 179, 90, 30);
+        regresar.setBounds(200, 310, 90, 30);
 
         ingresar.setText("Ingresar");
         ingresar.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 153, 153)));
@@ -119,7 +119,7 @@ public class Registrarse extends javax.swing.JFrame {
             }
         });
         jPanel1.add(ingresar);
-        ingresar.setBounds(250, 180, 110, 30);
+        ingresar.setBounds(340, 310, 110, 30);
 
         Nombre.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -127,9 +127,9 @@ public class Registrarse extends javax.swing.JFrame {
             }
         });
         jPanel1.add(Nombre);
-        Nombre.setBounds(180, 40, 170, 30);
+        Nombre.setBounds(240, 110, 170, 30);
         jPanel1.add(apellido);
-        apellido.setBounds(180, 80, 170, 30);
+        apellido.setBounds(240, 160, 170, 30);
 
         contraseña.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -137,21 +137,25 @@ public class Registrarse extends javax.swing.JFrame {
             }
         });
         jPanel1.add(contraseña);
-        contraseña.setBounds(180, 120, 170, 30);
+        contraseña.setBounds(240, 210, 170, 30);
 
         jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/fondocalculadora.png"))); // NOI18N
         jPanel1.add(jLabel5);
-        jLabel5.setBounds(-90, -70, 470, 360);
+        jLabel5.setBounds(-140, -60, 640, 440);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 378, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 481, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 260, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 366, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
 
         pack();

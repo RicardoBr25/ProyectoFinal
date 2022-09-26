@@ -17,8 +17,8 @@ public class principal extends javax.swing.JFrame {
     public principal() {
         initComponents();
         setLocationRelativeTo(null);
-        setExtendedState(this.NORMAL);
-        setSize(380,259);
+        
+        setSize(500,400);
     }
 
     /**
@@ -50,12 +50,13 @@ public class principal extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton5);
-        jButton5.setBounds(330, 230, 50, 30);
+        jButton5.setBounds(390, 310, 50, 30);
 
         jButton3.setBackground(new java.awt.Color(204, 204, 255));
-        jButton3.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jButton3.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jButton3.setText("Iniciar Sesión");
         jButton3.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jButton3.setContentAreaFilled(false);
         jButton3.setFocusPainted(false);
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -63,12 +64,13 @@ public class principal extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton3);
-        jButton3.setBounds(100, 80, 170, 25);
+        jButton3.setBounds(140, 110, 200, 50);
 
         jButton4.setBackground(new java.awt.Color(204, 204, 255));
-        jButton4.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jButton4.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jButton4.setText("Registrarse");
         jButton4.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jButton4.setContentAreaFilled(false);
         jButton4.setFocusPainted(false);
         jButton4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -76,11 +78,11 @@ public class principal extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton4);
-        jButton4.setBounds(80, 150, 200, 19);
+        jButton4.setBounds(130, 210, 220, 50);
 
         salir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/fondocalculadora.png"))); // NOI18N
         getContentPane().add(salir);
-        salir.setBounds(-80, -50, 480, 340);
+        salir.setBounds(-120, -50, 600, 420);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
